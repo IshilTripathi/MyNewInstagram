@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="600dp">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="@dimen/mtrl_card_spacing"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/primaryColor"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/custom_feed_page_desc">
+
+                <RadioButton
+                    android:id="@+id/radioBtnOption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option1"
+                    android:textColor="@color/darkTextColor"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnOption2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option2"
+                    android:textColor="@color/darkTextColor"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnOption3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option3"
+                    android:textColor="@color/darkTextColor"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+                <RadioButton
+                    android:id="@+id/radioBtnOption4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Option4"
+                    android:textColor="@color/darkTextColor"
+                    android:textSize="20dp"
+                    android:textStyle="italic" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/custom_feed_page_date"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Post Date"
+                android:textColor="@color/darkTextColor"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/custom_feed_page_profile_pic"
+                app:layout_constraintTop_toBottomOf="@+id/custom_feed_page_user_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/custom_feed_page_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="64dp"
+                android:text="Question"
+                android:textColor="@color/darkTextColor"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/custom_feed_page_profile_pic" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/custom_feed_page_user_name"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="User Name"
+                android:textColor="@color/primaryOnColor"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/custom_feed_page_profile_pic"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/custom_feed_page_profile_pic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/user"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/custom_feed_page_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/like"
+                app:layout_constraintEnd_toStartOf="@+id/custom_feed_page_like_count"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/custom_feed_page_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="0"
+                android:textColor="@color/darkTextColor"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toStartOf="@+id/custom_feed_page_comment"
+                app:layout_constraintStart_toEndOf="@+id/custom_feed_page_like"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <ImageView
+                android:id="@+id/custom_feed_page_comment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/comment"
+                app:layout_constraintEnd_toStartOf="@+id/custom_feed_page_comment_count"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/custom_feed_page_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="37dp"
+                android:text="0"
+                android:textColor="@color/darkTextColor"
+                android:textSize="25dp"
+                app:layout_constraintStart_toEndOf="@+id/custom_feed_page_comment"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginTop="16dp"
+                android:width="300dp"
+
+                android:height="50dp"
+                android:elevation="50dp"
+                android:text="SUBMIT"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="#ffffff"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/custom_feed_page_comment_count" />
+
+            <ImageView
+                android:id="@+id/custom_feed_page_share"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

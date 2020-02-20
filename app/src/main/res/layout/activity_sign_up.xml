@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ContraintLayoutRegister"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_screen_background"
+    tools:context="com.example.mynewinstagram.authentication_package.SignUpActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:text="Welcome Back!"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="18dp"
+        android:text="Sign Up to connect with us"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailRegisterLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailRegisterLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
+        android:hint="Email"
+        android:textColorHint="@color/primaryOnColor"
+        app:boxStrokeColor="@color/boxStrokeColorFocused"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/primaryLightColor"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/design_default_color_error"
+        app:helperTextEnabled="true"
+
+        app:helperTextTextColor="@color/primaryTextColor"
+        app:hintTextColor="@color/primaryOnColor"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordRegisterLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/emaiRegisterlEditText"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PasswordRegisterLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:hint="Password"
+        android:textColorHint="@color/primaryOnColor"
+        app:boxStrokeColor="@color/boxStrokeColorFocused"
+        app:endIconTint="@color/primaryLightColor"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/design_default_color_error"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/primaryTextColor"
+        app:hintTextColor="@color/primaryOnColor"
+
+        app:layout_constraintBottom_toTopOf="@+id/RepeatPasswordRegisterLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegisterLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/primaryLightColor"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/PasswordRegisterEditText"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/RepeatPasswordRegisterLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
+        android:hint="RepeatPassword"
+        android:textColorHint="@color/primaryOnColor"
+        app:boxStrokeColor="@color/boxStrokeColorFocused"
+        app:endIconTint="@color/primaryLightColor"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/design_default_color_error"
+        app:helperTextEnabled="true"
+
+        app:helperTextTextColor="@color/primaryTextColor"
+        app:hintTextColor="@color/primaryOnColor"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneRegisterLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordRegisterLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/primaryLightColor"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/RepeatPasswordRegisterEditText"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PhoneRegisterLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:hint="ContactNo."
+        android:textColorHint="@color/primaryOnColor"
+        app:boxStrokeColor="@color/boxStrokeColorFocused"
+        app:endIconTint="@color/primaryLightColor"
+        app:errorEnabled="true"
+        app:errorIconTint="@color/design_default_color_error"
+
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/primaryTextColor"
+        app:hintTextColor="@color/primaryOnColor"
+        app:layout_constraintBottom_toTopOf="@+id/submitRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RepeatPasswordRegisterLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:id="@+id/PhoneRegisterEditText"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitRegister"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="69dp"
+
+
+        android:layout_marginBottom="32dp"
+        android:background="@color/primaryDarkColor"
+        android:elevation="50dp"
+        android:text="Become A New Member"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneRegisterLayout" />
+
+    <ProgressBar
+        android:id="@+id/progressBarRegister"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

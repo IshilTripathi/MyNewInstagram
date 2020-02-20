@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add_quiz.AddQuiz">
+
+    <ProgressBar
+        android:id="@+id/progressBarAddQuiz"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:hint="Write Your Question Here"
+        android:inputType="text"
+        android:padding="20dp"
+
+        android:textColor="#ffffff"
+        android:textColorHint="@color/darkTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/option1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/option1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:hint="Option 1"
+
+        android:paddingLeft="12dp"
+        android:textColorHint="@color/darkTextColor"
+        android:inputType="text"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/option2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <EditText
+        android:id="@+id/option2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:paddingLeft="12dp"
+        android:textColorHint="@color/darkTextColor"
+
+        android:inputType="textPersonName"
+        android:hint="Option2"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/option3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1" />
+
+    <EditText
+        android:id="@+id/option3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:paddingLeft="12dp"
+        android:textColorHint="@color/darkTextColor"
+
+        android:inputType="textPersonName"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        android:hint="Option 3"
+        app:layout_constraintBottom_toTopOf="@+id/option4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2" />
+
+    <EditText
+        android:id="@+id/option4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        android:paddingLeft="12dp"
+        android:textColorHint="@color/darkTextColor"
+
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        android:hint="Option 4"
+        app:layout_constraintBottom_toTopOf="@+id/correctOption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3" />
+
+    <EditText
+        android:id="@+id/correctOption"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:paddingLeft="12dp"
+        android:textColorHint="@color/darkTextColor"
+
+        android:textColor="#ffffff"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tv_correct"
+        app:layout_constraintTop_toBottomOf="@+id/option4" />
+
+    <TextView
+        android:id="@+id/tv_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="Correct Option:"
+
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option4" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitPaperButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:width="300dp"
+        android:height="50dp"
+
+        android:background="@color/primaryDarkColor"
+        android:elevation="50dp"
+        android:text="Next"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctOption" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/primaryOnColor</item>
+        <item name="colorAccent">@color/primaryLightColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/secondaryLightColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="errorAppearanceWeak" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/errorWeak</item>
+    </style>
+    <style name="errorAppearanceGood" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/errorGood</item>
+    </style>
+    <style name="errorAppearanceStrong" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/errorStrong</item>
+    </style>
+</resources>

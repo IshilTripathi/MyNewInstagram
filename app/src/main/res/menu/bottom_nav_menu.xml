@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        />
+    <item
+        android:id="@+id/navigation_feed"
+        android:icon="@drawable/mcq"
+        />
+
+    <item
+        android:id="@+id/new_post_icon"
+        android:icon="@drawable/new_post_icon"
+        />
+    
+    <item
+        android:id="@+id/navigation_quiz"
+        android:icon="@drawable/addques"
+        />
+
+    <item
+        android:id="@+id/navigation_userprofile"
+        android:icon="@drawable/ic_person_outline_black_24dp"
+        />
+
+
+</menu>
